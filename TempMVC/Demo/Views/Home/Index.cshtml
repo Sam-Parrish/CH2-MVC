@@ -1,0 +1,39 @@
+﻿@model FutureValueModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width"/>
+        <title>Home Page</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <h1>Future Value Calculator</h1>
+        <form asp-action="Index" method="post">
+            <div>
+                <label asp-for="MonthlyInvestment">Monthly Investment</label>
+                <br/>
+                <input asp-for="MonthlyInvestment" />
+                <br/><br/> 
+            </div>
+            <div>
+                <label asp-for="YearlyInterestRate">Yearly Investment Rate</label>
+                <br/>
+                <input asp-for="YearlyInterestRate" />
+                <br/><br/>
+            </div>
+            <div>
+                <label asp-for="Years">Years</label>
+                <br />
+                <input asp-for="Years" />
+                <br /><br />
+            </div>
+            <button type="submit">Calculate</button>
+            <a asp-action="Index">Clear</a>
+        </form>
+    </body>
+</html>
